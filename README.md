@@ -6,6 +6,18 @@
 ***
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
+### functionalities
+***
+#### Basic functionalities
+An artist will be able to login and add a post, Edit, and Delete the post
+
+Other artist will be able to see the posts made by the artists but won't be able to delete and edit
+He will also be able to hire or send a request for collaboration to the particular artist
+
+#### additional functionalities if time permits
+Users will be able to comment on the work of other artists
+
+
 ### Prerequisites
     1. Visual Code studio or similar IDE
     2. Git Bash
