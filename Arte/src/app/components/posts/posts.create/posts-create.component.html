@@ -30,8 +30,9 @@
             <div class="input-group-prepend">
                 <span class="input-group-text">Description</span>
             </div>
-            <textarea class="form-control" aria-label="With textarea"></textarea>
+            <textarea class="form-control" [(ngModel)]="enteredValue" aria-label="With textarea" [ngModelOptions]="{standalone: true}"></textarea>
         </div>
-        <button type="button" class="btn btn-primary">Post</button>
+        <button type="button" (click)="AddPost()" class="btn btn-primary">Post</button>
     </form>
+    <p>{{newPost}}</p>
 </div>
