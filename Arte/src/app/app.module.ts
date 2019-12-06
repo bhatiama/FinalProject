@@ -11,6 +11,7 @@ import { MatButtonModule} from '@angular/material/button';
 import { LoginComponent } from './components/login/login.component';
 import { HeaderComponent } from './components/header/header.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { RegisterComponent } from './components/register/register.component';
 
 
 @NgModule({
@@ -19,6 +20,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
     PostsComponent,
     LoginComponent,
     HeaderComponent,
+    RegisterComponent,
   ],
   imports: [
     BrowserModule,
