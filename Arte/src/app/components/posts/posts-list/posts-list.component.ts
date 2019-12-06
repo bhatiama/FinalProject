@@ -8,11 +8,14 @@ import {  PostService } from '../post.service';
 })
 export class PostsListComponent implements OnInit {
   @Input() posts: Post[] = [];
+
   constructor(public postsService: PostService) { 
 
   }
 
   ngOnInit() {
+    this.posts = this.postsService.getPosts();
+
   }
 
 }
