@@ -6,7 +6,7 @@
                 <span class="input-group-text" id="inputGroup-sizing-default">Title</span>
             </div>
             <input type="text" class="form-control" aria-label="Sizing example input"
-                aria-describedby="inputGroup-sizing-default">
+                aria-describedby="inputGroup-sizing-default" [(ngModel)]="enteredTitle" [ngModelOptions]="{standalone: true}">
         </div>
 
         <!-- <div class="file-upload">
@@ -30,7 +30,7 @@
             <div class="input-group-prepend">
                 <span class="input-group-text">Description</span>
             </div>
-            <textarea class="form-control" [(ngModel)]="enteredValue" aria-label="With textarea" [ngModelOptions]="{standalone: true}"></textarea>
+            <textarea class="form-control" [(ngModel)]="enteredContent" aria-label="With textarea" [ngModelOptions]="{standalone: true}"></textarea>
         </div>
         <button type="button" (click)="AddPost()" class="btn btn-primary">Post</button>
     </form>

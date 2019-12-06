@@ -7,9 +7,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Arte';
+  posts=[];
   showVar: boolean = false;
   showVar1: boolean = true;
   constructor() { }
   ngOnInit() {
+  }
+  onPostAdded(post){
+    this.posts.push(post);
   }
 }
