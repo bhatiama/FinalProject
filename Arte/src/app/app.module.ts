@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { PostsComponent } from './components/posts/posts.component';
+import { PostsCreateComponent } from './components/posts/posts.create/posts-create.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
@@ -17,7 +17,7 @@ import { RegisterComponent } from './components/register/register.component';
 @NgModule({
   declarations: [
     AppComponent,
-    PostsComponent,
+    PostsCreateComponent,
     LoginComponent,
     HeaderComponent,
     RegisterComponent,
