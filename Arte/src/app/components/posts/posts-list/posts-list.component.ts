@@ -7,7 +7,7 @@ import {  PostService } from '../post.service';
   styleUrls: ['./posts-list.component.scss']
 })
 export class PostsListComponent implements OnInit {
-  @Input() posts: Post[] = [];
+  posts: Post[] = [];
 
   constructor(public postsService: PostService) { 
 
