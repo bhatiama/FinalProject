@@ -4,8 +4,6 @@
   padding: 40px;
   box-shadow: 2px 2px 20px rgba(68,68,68,0.45);
   margin-top: 5%;
-
-
 }
 
 .create-posts > * {
@@ -18,12 +16,14 @@
 text-align:center;
 font-family: Helvetica, Arial, sans-serif;
 font-size: 12px;
+margin-bottom: 3%;
 }
 
 .file-upload .file-select
 {
   display:block;
   border: 2px solid #dce4ec;
+  border-radius: 5px;
   color: #34495e;
   cursor:pointer;
   height:40px;
