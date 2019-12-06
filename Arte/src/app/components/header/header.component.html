@@ -1,11 +1,26 @@
-<mat-toolbar color="primary">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container">
-        <span class="logo">ARTE</span>
-        <span class="buttons"><button mat-raised-button>Log In</button>
-            <button mat-raised-button>Register</button>
-        </span>
+        <a class="navbar-brand" href="#">Arte</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">                
+            </ul>
+            
+            <form class="form-inline my-2 my-lg-0">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Register</a>
+                    </li>
+                </ul>
+            </form>
+        </div>
     </div>
-    <!-- <span class="example-spacer"></span> -->
-    <!-- <mat-icon class="example-icon" aria-hidden="false" aria-label="Example heart icon">login</mat-icon> -->
-    <!-- <mat-icon class="example-icon" aria-hidden="false" aria-label="Example delete icon">delete</mat-icon> -->
-</mat-toolbar>
+
+</nav>

@@ -1,21 +1,39 @@
 <div class="create-posts">
-  <mat-form-field>
-    <input matInput placeholder="Input">
-  </mat-form-field>
+    <h1>Create A Post</h1>
+    <form action="">
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-default">Title</span>
+            </div>
+            <input type="text" class="form-control" aria-label="Sizing example input"
+                aria-describedby="inputGroup-sizing-default">
+        </div>
 
-  <mat-form-field>
-    <textarea matInput placeholder="Textarea"></textarea>
-  </mat-form-field>
-
-  <div class="file-upload">
-    <div class="file-select">
-      <div class="file-select-button" id="fileName">Choose File</div>
-      <div class="file-select-name" id="noFile">No file chosen...</div>
-      <input type="file" name="chooseFile" id="chooseFile">
-    </div>
-  </div>
-
+        <!-- <div class="file-upload">
+            <div class="file-select">
+                <div class="file-select-button" id="fileName">Choose File</div>
+                <div class="file-select-name" id="noFile"></div>
+                <input type="file" name="chooseFile" id="chooseFile">
+            </div>
+        </div> -->
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
+            </div>
+            <div class="custom-file">
+                <input type="file" class="custom-file-input" id="inputGroupFile01"
+                    aria-describedby="inputGroupFileAddon01">
+                <label class="custom-file-label" for="inputGroupFile01">Choose File</label>
+            </div>
+        </div>
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <span class="input-group-text">Description</span>
+            </div>
+            <textarea class="form-control" aria-label="With textarea"></textarea>
+        </div>
+        <button type="button" class="btn btn-primary">Post</button>
+    </form>
 
   <button mat-raised-button color="primary">Post</button>
 </div>
-

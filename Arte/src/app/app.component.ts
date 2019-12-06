@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Arte';
+  showVar: boolean = false;
+  showVar1: boolean = true;
+  constructor() { }
+  ngOnInit() {
+  }
 }
