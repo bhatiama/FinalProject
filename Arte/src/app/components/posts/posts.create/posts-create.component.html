@@ -1,12 +1,12 @@
 <div class="create-posts">
     <h1>Create A Post</h1>
-    <form action="">
+    <form action="" (submit)="AddPost(postForm)" #postForm="ngForm">
         <div class="input-group mb-3">
             <div class="input-group-prepend">
                 <span class="input-group-text" id="inputGroup-sizing-default">Title</span>
             </div>
             <input type="text" class="form-control" aria-label="Sizing example input"
-                aria-describedby="inputGroup-sizing-default" [(ngModel)]="enteredTitle" [ngModelOptions]="{standalone: true}">
+                aria-describedby="inputGroup-sizing-default" name="title" ngModel required #title="ngModel">
         </div>
 
         <!-- <div class="file-upload">
@@ -30,9 +30,10 @@
             <div class="input-group-prepend">
                 <span class="input-group-text">Description</span>
             </div>
-            <textarea class="form-control" [(ngModel)]="enteredContent" aria-label="With textarea" [ngModelOptions]="{standalone: true}"></textarea>
+            <textarea class="form-control" aria-label="With textarea"
+                name="content" ngModel required></textarea>
         </div>
-        <button type="button" (click)="AddPost()" class="btn btn-primary">Post</button>
+        <button type="submit" class="btn btn-primary">Post</button>
     </form>
     <p>{{newPost}}</p>
 </div>
