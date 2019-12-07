@@ -14,3 +14,12 @@ exports.search = function (params) {
     const promise = Post.find(params).exec();
     return promise;
 };
+/*
+* @exports .save this is save function that takes in the 
+* @param post and saves it to the db 
+*/
+exports.save = function (post) {
+   const newPost = new Post(post);
+   const promise = newPost.save();
+   return promise;
+};

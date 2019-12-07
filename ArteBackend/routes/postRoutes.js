@@ -18,5 +18,6 @@ module.exports = function(app){
     //route for search and create
         app.route('/posts')
         .get(postController.list)
+        .post(postController.post);
         
 }

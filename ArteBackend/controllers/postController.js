@@ -13,14 +13,33 @@ const postService = require('../services/postService');
 */
 exports.list = function (request, response) {
     console.log(`${request.url} and ${request.method}`);
-    const resolve = (toDos) => {
+    const resolve = (posts) => {
         response.status(200);
-        response.json(toDos);
+        response.json(posts);
     };
     postService.search({})
         .then(resolve)
         .catch(renderErrorResponse(response));
 };
+
+/** 
+ * @exports post this function exports as .post can be accessed by toDoController.post in the toDoRoutes POST Route to for /todos
+ * Enables the Create Operation to create a specific todo
+ * @param request this variable saves the request to enable console logging
+ * @param response this variable helps us send the response  
+*/
+exports.post = function (request, response) {
+    console.log(`url: ${request.url} and method: ${request.method} and body contains the task: ${request.body.task}`);
+    const newPost = Object.assign({}, request.body);
+    const resolve = (post) => {
+        response.status(200);
+        response.json(post);
+    };
+    postService.save(newPost)
+        .then(resolve)
+        .catch(renderErrorResponse(response));
+};
+
 let renderErrorResponse = (response) => {
     const errorCallback = (error) => {
         if (error) {
