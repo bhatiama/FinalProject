@@ -11,8 +11,12 @@
  * 
 */
 module.exports = function(app){
-    
+    const postController = require('../controllers/postController');
     app.get('/', (req,res)=>{
         res.send("slash route");
     })
+    //route for search and create
+        app.route('/posts')
+        .get(postController.list)
+        
 }
