@@ -16,14 +16,14 @@ app.use(bodyParser.urlencoded(
     }
 ));
 
-// mongoose.connect("mongodb+srv://user:user@maindatabase-qpzwn.mongodb.net/postsdb?retryWrites=true&w=majority",{
-//   useUnifiedTopology:true,
-//   useFindAndModify:false
-//   }).then(() => {
-//   console.log("connected to DB");
-// }).catch(() => {
-//   console.log("connection failed");
-// })
+mongoose.connect("mongodb+srv://user:user@maindatabase-qpzwn.mongodb.net/postsdb?retryWrites=true&w=majority",{
+  useUnifiedTopology:true,
+  useFindAndModify:false
+  }).then(() => {
+  console.log("connected to DB");
+}).catch(() => {
+  console.log("connection failed");
+})
 app.use(bodyParser.json());
 app.use((req,res,next)=>{
     console.log("working");
