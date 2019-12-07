@@ -4,7 +4,8 @@ const http = require('http'),
      mongoose    = require("mongoose"),
      initApp = require('./ArteBackend/app'),
      bodyParser = require('body-parser'),
-     port = process.env.PORT || 3000;
+     port = process.env.PORT || 3000,
+     debug = require('debug')('node-angular');
 
 // app.set('port',);
 const server = http.createServer(app);
@@ -35,9 +36,9 @@ app.use(function (req, res, next) {
     next();
 });
 
-app.use((req, res, next)=>{
-    res.send("hello")
-})
+// app.use((req, res, next)=>{
+//     res.send("hello")
+// })
 initApp(app);
 
 app.listen(port, ()=>{
