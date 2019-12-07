@@ -6,7 +6,7 @@ module.exports = function(app){
     // //initializing db model
     // const toDoModel = require('./models/toDoSchema');
     // //initializing routes
-    // const toDoRoutes = require('./routes/toDoRoutes');
-    // toDoRoutes(app);
+    const postRoutes = require('./routes/postRoutes');
+    postRoutes(app);
     console.log("here")
 }
