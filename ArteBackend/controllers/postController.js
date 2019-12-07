@@ -3,7 +3,7 @@
 /** 
  * @var postService this variable takes us to the toDoService.js
 */
-// const postService = require('../services/postService');
+const postService = require('../services/postService');
 
 /** 
  * @exports list this function exports as .list can be accessed by postController.list in the toDoRoutes GET Route to for /posts
@@ -12,14 +12,22 @@
  * @param response this variable helps us send the response  
 */
 exports.list = function (request, response) {
-    const posts = [
-        {
-            id: "asdadasdsda",
-            title: "post from server",
-            content: "from server hope this works"
-        }
-    ];
-    response.json({
-        posts: posts
-    })
+    console.log(`${request.url} and ${request.method}`);
+    const resolve = (toDos) => {
+        response.status(200);
+        response.json(toDos);
+    };
+    postService.search({})
+        .then(resolve)
+        .catch(renderErrorResponse(response));
 };
+let renderErrorResponse = (response) => {
+    const errorCallback = (error) => {
+        if (error) {
+            response.status(500);
+            response.json({
+                message: error.message
+            });
+        }
+    }
+}
