@@ -29,7 +29,7 @@ exports.list = function (request, response) {
  * @param response this variable helps us send the response  
 */
 exports.post = function (request, response) {
-    console.log(`url: ${request.url} and method: ${request.method} and body contains the task: ${request.body.task}`);
+    console.log(`url: ${request.url} and method: ${request.method} and body contains the post: ${request.body}`);
     const newPost = Object.assign({}, request.body);
     const resolve = (post) => {
         response.status(200);
@@ -49,4 +49,5 @@ let renderErrorResponse = (response) => {
             });
         }
     }
+    return errorCallback;
 }
