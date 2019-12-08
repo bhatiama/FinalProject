@@ -16,7 +16,7 @@ module.exports = function(app){
         res.send("slash route");
     })
     //route for search and create
-        app.route('/posts')
+    app.route('/posts')
         .get(postController.list)
         .post(postController.post);
         
