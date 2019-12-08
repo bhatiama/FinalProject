@@ -1,15 +1,15 @@
 const express = require("express");
 const bodyParser = require("body-parser");
-const mongoose =require("mongoose");
+const mongoose = require("mongoose");
 
 const Post = require('./models/postSchema');
 const app = express();
 
-mongoose.connect("mongodb+srv://user:user@maindatabase-qpzwn.mongodb.net/postsdb?retryWrites=true&w=majority",{
-  useUnifiedTopology:true,
-  useFindAndModify:false,
+mongoose.connect("mongodb+srv://user:user@maindatabase-qpzwn.mongodb.net/postsdb?retryWrites=true&w=majority", {
+  useUnifiedTopology: true,
+  useFindAndModify: false,
   useNewUrlParser: true
-  }).then(() => {
+}).then(() => {
   console.log("connected to DB");
 }).catch(() => {
   console.log("connection failed");
@@ -36,7 +36,7 @@ app.post("/posts", (req, res, next) => {
     title: req.body.title,
     content: req.body.content
   });
-  
+
   // const post = req.body;
   console.log(post);
   post.save();
@@ -46,13 +46,13 @@ app.post("/posts", (req, res, next) => {
 });
 
 app.get("/posts", (req, res, next) => {
-  Post.find().then(documents =>{
+  Post.find().then(documents => {
     console.log(documents);
     res.status(200).json({
       message: "Posts fetched successfully!",
       posts: documents
     });
-  }).catch(error =>{
+  }).catch(error => {
     console.log(error);
   });
   // const posts = [
@@ -67,12 +67,16 @@ app.get("/posts", (req, res, next) => {
   //     content: "This is coming from the server!"
   //   }
   // ];
-  
+
 });
 app.get("/", (req, res, next) => {
-   res.status(200).json({
-      message: "Posts fetched successfully!",
-    });
+  res.status(200).json({
+    message: "Posts fetched successfully!",
   });
+});
 
+app.delete("/posts/:id", (req, res, next) => {
+  console.log(req.params.id+` is going to be deleted`)
+  res.status(200).json({ message: "this post is about to be deleted"})
+})
 module.exports = app;
