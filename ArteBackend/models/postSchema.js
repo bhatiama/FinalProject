@@ -46,4 +46,4 @@ postSchema.set('toJSON', {
 /** 
  * @exports module the mongo model based on the toDoSchema is exported 
 */
-module.exports = mongoose.model("posts", postSchema);
+module.exports = mongoose.model("Post", postSchema);

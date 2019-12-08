@@ -1,7 +1,19 @@
 const express = require("express");
 const bodyParser = require("body-parser");
+const mongoose =require("mongoose");
 
+const Post = require('./models/postSchema');
 const app = express();
+
+mongoose.connect("mongodb+srv://user:user@maindatabase-qpzwn.mongodb.net/postsdb?retryWrites=true&w=majority",{
+  useUnifiedTopology:true,
+  useFindAndModify:false,
+  useNewUrlParser: true
+  }).then(() => {
+  console.log("connected to DB");
+}).catch(() => {
+  console.log("connection failed");
+})
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -20,8 +32,14 @@ app.use((req, res, next) => {
 });
 
 app.post("/posts", (req, res, next) => {
-  const post = req.body;
+  const post = new Post({
+    title: req.body.title,
+    content: req.body.content
+  });
+  
+  // const post = req.body;
   console.log(post);
+  post.save();
   res.status(201).json({
     message: 'Post added successfully'
   });
