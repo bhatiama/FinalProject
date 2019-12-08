@@ -15,7 +15,7 @@ const postSchema = new Schema({
     },
     //content of the post
     content:{
-        type:String,
+        type: String,
         required: [true, "Content is required"]
         // default: Date.now
     },
