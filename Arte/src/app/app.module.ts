@@ -14,6 +14,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { RegisterComponent } from './components/register/register.component';
 import { PostsListComponent } from './components/posts/posts-list/posts-list.component';
+import { HttpClientModule } from '@angular/common/http'; 
 
 
 @NgModule({
@@ -33,7 +34,8 @@ import { PostsListComponent } from './components/posts/posts-list/posts-list.com
     MatInputModule,
     MatButtonModule,
     MatToolbarModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
