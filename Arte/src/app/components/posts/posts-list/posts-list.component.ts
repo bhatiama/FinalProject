@@ -1,6 +1,6 @@
 import { Component, OnInit, Input, OnDestroy } from '@angular/core';
-import { Post } from '../post.model';
-import {  PostService } from '../post.service';
+import { Post } from '../../../models/post.model';
+import {  PostService } from '../../../services/post.service';
 import { Subscription } from 'rxjs';
 @Component({
   selector: 'app-posts-list',
@@ -10,7 +10,7 @@ import { Subscription } from 'rxjs';
 export class PostsListComponent implements OnInit, OnDestroy {
   posts: Post[] = [];
   private postSub : Subscription;
-  constructor(public postsService: PostService) { 
+  constructor(public postsService: PostService) {
 
   }
 
