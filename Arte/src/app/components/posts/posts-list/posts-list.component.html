@@ -1,27 +1,40 @@
 <app-posts-create></app-posts-create>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <div class="container" *ngIf="posts.length>0">
     <div class="accordion" id="accordionExample">
         <div class="card" *ngFor="let post of posts">
             
-            <div class="card" style="width: 18rem;">
+            <div class="card" style="width: 100%" height="50px;">
+                <div class="row justify-content-center">
+                <div class="col-8">
                 <img class="card-img-top" src="https://homepages.cae.wisc.edu/~ece533/images/airplane.png" alt="Card image cap">
                 <div class="card-body">
                     <p class="card-text">This is Title</p>
                   <p class="card-text">This is Description</p>
                   <div class="col-sm-12 text-center">
-                    <button id="btnSearch" class="btn btn-primary btn-sm center-block" Style="width: 100px;" OnClick="btnSearch_Click" >Edit</button>
-                     <button id="btnClear" class="btn btn-danger btn-sm center-block" Style="width: 100px;" OnClick="btnClear_Click" >Delete</button>
+                    <button type="button" class="btn btn-default btn-sm">
+                        <span class="glyphicon glyphicon-pencil"></span> Edit 
+                      </button>
+                      <button type="button" class="btn btn-default btn-sm">
+                        <span class="glyphicon glyphicon-trash"></span> Delete 
+                      </button>
                  </div>
                   <p class="card-text">Comment</p>
                 <textarea class='form-control'></textarea><br>
                 <div class="col-sm-12 text-center">
-                    <button id="btnSearch" class="btn btn-primary btn-sm center-block" Style="width: 100px;" OnClick="btnSearch_Click" >Edit</button>
-                     <button id="btnClear" class="btn btn-danger btn-sm center-block" Style="width: 100px;" OnClick="btnClear_Click" >Delete</button>
+                    <button type="button" class="btn btn-default btn-sm">
+                        <span class="glyphicon glyphicon-pencil"></span> Edit 
+                      </button>
+                      <button type="button" class="btn btn-default btn-sm">
+                        <span class="glyphicon glyphicon-trash"></span> Delete 
+                      </button>
                  </div>
                 </div>
-                
+                </div>
               </div>
-
+              </div>
         </div>
     </div>
 </div>
