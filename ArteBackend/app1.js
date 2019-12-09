@@ -76,7 +76,11 @@ app.get("/", (req, res, next) => {
 });
 
 app.delete("/posts/:id", (req, res, next) => {
-  console.log(req.params.id+` is going to be deleted`)
-  res.status(200).json({ message: "this post is about to be deleted"})
+  Post.deleteOne({_id: req.params.id}).then(result => {
+    console.log(result);
+    res.status(200).json({ message: "this post is about to be deleted"})
+  })
+  
 })
+
 module.exports = app;
