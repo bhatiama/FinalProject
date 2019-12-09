@@ -1,22 +1,27 @@
+<app-posts-create></app-posts-create>
 <div class="container" *ngIf="posts.length>0">
     <div class="accordion" id="accordionExample">
         <div class="card" *ngFor="let post of posts">
-            <div class="card-header" id="headingOne">
-                <h2 class="mb-0">
-                    <button class="btn btn-link" type="button" data-toggle="collapse"
-                        data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                        {{post.title}}
-                    </button>
-                </h2>
-                <button class="btn btn-info">Edit</button>
-               <button class="btn btn-danger" (click)="onDelete(post.id)">Delete</button>
-            </div>
-
-            <div id="collapseOne" class="show" aria-labelledby="headingOne" data-parent="#accordionExample">
+            
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="https://homepages.cae.wisc.edu/~ece533/images/airplane.png" alt="Card image cap">
                 <div class="card-body">
-                    {{post.content}}
+                    <p class="card-text">This is Title</p>
+                  <p class="card-text">This is Description</p>
+                  <div class="col-sm-12 text-center">
+                    <button id="btnSearch" class="btn btn-primary btn-sm center-block" Style="width: 100px;" OnClick="btnSearch_Click" >Edit</button>
+                     <button id="btnClear" class="btn btn-danger btn-sm center-block" Style="width: 100px;" OnClick="btnClear_Click" >Delete</button>
+                 </div>
+                  <p class="card-text">Comment</p>
+                <textarea class='form-control'></textarea><br>
+                <div class="col-sm-12 text-center">
+                    <button id="btnSearch" class="btn btn-primary btn-sm center-block" Style="width: 100px;" OnClick="btnSearch_Click" >Edit</button>
+                     <button id="btnClear" class="btn btn-danger btn-sm center-block" Style="width: 100px;" OnClick="btnClear_Click" >Delete</button>
+                 </div>
                 </div>
-            </div>
+                
+              </div>
+
         </div>
     </div>
 </div>
