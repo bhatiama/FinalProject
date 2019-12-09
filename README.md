@@ -31,3 +31,15 @@ A step by step series of examples that tell you how to get a development env run
     1. Clone the repository `https://github.com/bhatiama/FinalProject`.
     2. Navigate to project directory `cd FinalProject`.
     3. Run `npm install`.
+
+### Dev-Run config
+    
+    1. for Node server in the project directory run 
+    ```sh
+    npm run start-dev
+    ```
+    2. for angular server navigate inside the Arte Directory
+    and do ```sh
+    ng serve
+    ```
+    3. Run `npm install`.
