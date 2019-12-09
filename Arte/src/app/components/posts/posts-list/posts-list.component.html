@@ -1,0 +1,22 @@
+<div class="container" *ngIf="posts.length>0">
+    <div class="accordion" id="accordionExample">
+        <div class="card" *ngFor="let post of posts">
+            <div class="card-header" id="headingOne">
+                <h2 class="mb-0">
+                    <button class="btn btn-link" type="button" data-toggle="collapse"
+                        data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        {{post.title}}
+                    </button>
+                </h2>
+                <button class="btn btn-info">Edit</button>
+                <button class="btn btn-danger">Delete</button>
+            </div>
+
+            <div id="collapseOne" class="show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                <div class="card-body">
+                    {{post.content}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
